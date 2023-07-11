@@ -58,7 +58,7 @@ def contact():
             today = datetime.today().strftime("%d/%m/%Y %H:%M:%S")
             name = request.form["name"]
             email = request.form["email"]
-            # phone = request.form["phone"]
+            phone = request.form["phone"]
             message = request.form["message"]
 
             
@@ -67,8 +67,9 @@ def contact():
                 f"Date : {today}<br>" \
                 f"Name : {name}<br>" \
                 f"Email : {email}<br>" \
+                f"Phone : {phone}<br>" \
                 f"Message : {message}<br><br>"
-                # f"Phone : {phone}<br>" \
+                
             msg = Message(
                 subject='New Contact Form Received',
                 html=html,
